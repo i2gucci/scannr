@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - scannr</title>
+    <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="top-nav-content">
+            <a href="index.html" class="nav-brand">
+                <svg class="brand-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="36" height="36" rx="18" fill="#00ff88" fill-opacity="0.1" stroke="#00ff88" stroke-width="2"/>
+                    <path d="M20 12L28 20L20 28L12 20L20 12Z" fill="#00ff88"/>
+                    <circle cx="20" cy="20" r="3" fill="#0a0a0a"/>
+                </svg>
+                <span>scannr</span>
+            </a>
+            <div class="search-box">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" placeholder="Search documentation..." />
+                <span class="search-shortcut">Ctrl K</span>
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleSidebar()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="docs-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Getting Started</h3>
+                    <ul class="sidebar-links">
+                        <li><a href="#introduction" class="active">Introduction</a></li>
+                        <li><a href="#quick-start">Quick Start</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Core Features</h3>
+                    <ul class="sidebar-links">
+                        <li><a href="#scout">Scout - Token Discovery</a></li>
+                        <li><a href="#snipe">Snipe - Instant Trading</a></li>
+                        <li><a href="#intel">Intel - Wallet Analysis</a></li>
+                        <li><a href="#track">Track - Portfolio Monitoring</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Advanced Features</h3>
+                    <ul class="sidebar-links">
+                        <li><a href="#limit-orders">Limit Orders</a></li>
+                        <li><a href="#copy-trading">Copy Trading</a></li>
+                        <li><a href="#alerts">Custom Alerts</a></li>
+                        <li><a href="#multi-chain">Multi-Chain Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Trading Strategies</h3>
+                    <ul class="sidebar-links">
+                        <li><a href="#migration-trades">Migration Trading</a></li>
+                        <li><a href="#dca">DCA Strategies</a></li>
+                        <li><a href="#stop-loss">Stop Loss & Take Profit</a></li>
+                        <li><a href="#risk-management">Risk Management</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Commands Reference</h3>
+                    <ul class="sidebar-links">
+                        <li><a href="#basic-commands">Basic Commands</a></li>
+                        <li><a href="#trade-commands">Trade Commands</a></li>
+                        <li><a href="#analysis-commands">Analysis Commands</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Account & Security</h3>
+                    <ul class="sidebar-links">
+                        <li><a href="#wallet-setup">Wallet Setup</a></li>
+                        <li><a href="#security">Security Best Practices</a></li>
+                        <li><a href="#api-keys">API Keys</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Support</h3>
+                    <ul class="sidebar-links">
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#troubleshooting">Troubleshooting</a></li>
+                        <li><a href="#contact">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="docs-main">
+            <!-- Hero Banner -->
+            <div class="docs-hero">
+                <div class="docs-hero-icon">
+                    <svg width="80" height="80" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="36" height="36" rx="18" fill="#00ff88" fill-opacity="0.1" stroke="#00ff88" stroke-width="2"/>
+                        <path d="M20 12L28 20L20 28L12 20L20 12Z" fill="#00ff88"/>
+                        <circle cx="20" cy="20" r="3" fill="#0a0a0a"/>
+                    </svg>
+                </div>
+                <h1 class="docs-hero-title">scannr – The Future of AI Trading</h1>
+            </div>
+
+            <!-- Introduction -->
+            <section id="introduction" class="docs-section">
+                <p class="intro-text">
+                    scannr is the fastest and most intelligent AI-powered trading agent, designed to elevate your crypto trading with advanced analytics, real-time monitoring, and lightning-fast execution. Our conversational interface enables you to discover, analyze, and execute trades in plain English, giving you the competitive edge needed in fast-paced markets.
+                </p>
+                <p class="intro-text">
+                    With wallet tracking, token scouting, and instant trade execution, scannr is packed with powerful features tailored for both beginners and pro traders. In the market of token launches and high-frequency trading, every second counts, and scannr is your ultimate tool for securing massive gains.
+                </p>
+
+                <div class="callout callout-success">
+                    <div class="callout-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <div class="callout-content">
+                        <h4>Our Mission</h4>
+                        <p>At scannr, our mission is to build a comprehensive, AI-first trading platform that delivers unmatched performance while rewarding our users. We are committed to being the fastest, most efficient, and most community-driven trading experience—implementing the features you want most while ensuring a seamless and rewarding journey.</p>
+                        <p class="callout-signature">— The scannr Team</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Start -->
+            <section id="quick-start" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">🚀</span>
+                    Quick Start
+                </h2>
+                <p>Get started with scannr in under 60 seconds. No wallet connection, no app downloads—just pure AI-powered trading from your DMs.</p>
+
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Send a DM to @scannrbot on X</h3>
+                            <p>Open X (formerly Twitter) and send a message to @scannrbot saying "start trading" or "help"</p>
+                            <div class="code-block">
+                                <code>Direct message: "start trading"</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Set Up Your Trading Preferences</h3>
+                            <p>Tell scannr what you're looking for in plain English. Set your risk tolerance, preferred chains, and trading strategies.</p>
+                            <div class="code-block">
+                                <code>"I want to find tokens on Solana under 10M market cap"</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Start Trading</h3>
+                            <p>scannr will scout opportunities, provide analysis, and execute trades based on your commands. You're now ready to trade!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works -->
+            <section id="how-it-works" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">⚙️</span>
+                    How It Works
+                </h2>
+                <p>scannr uses advanced AI and real-time blockchain monitoring to provide you with actionable trading intelligence. Here's what powers the platform:</p>
+
+                <div class="features-showcase">
+                    <div class="feature-box">
+                        <h3>🔍 Real-Time Scanning</h3>
+                        <p>Monitors every token launch across multiple chains in real-time. Never miss an opportunity.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>🤖 AI Analysis</h3>
+                        <p>Advanced algorithms analyze contract code, liquidity, holder distribution, and more to identify quality projects.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>⚡ Instant Execution</h3>
+                        <p>Lightning-fast trade execution through optimized MEV protection and routing algorithms.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>📊 Comprehensive Tracking</h3>
+                        <p>Monitor your portfolio, track wallet movements, and get alerts when your targets hit.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Scout Feature -->
+            <section id="scout" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">🔍</span>
+                    Scout - Token Discovery
+                </h2>
+                <p>Scout is your AI-powered token discovery engine that monitors launches 24/7 and surfaces opportunities that match your criteria.</p>
+
+                <h3>What Scout Does:</h3>
+                <ul class="feature-list">
+                    <li>Monitors all new token launches in real-time across supported chains</li>
+                    <li>Analyzes contract security, liquidity depth, and holder distribution</li>
+                    <li>Checks developer history and past project performance</li>
+                    <li>Identifies potential rugpulls and scam tokens</li>
+                    <li>Surfaces tokens based on your custom criteria</li>
+                </ul>
+
+                <h3>How to Use Scout:</h3>
+                <div class="code-block">
+                    <div class="code-header">Example Commands</div>
+                    <pre><code>// Basic scouting
+"scout new tokens on Solana"
+
+// With criteria
+"find tokens under 1M market cap with locked liquidity"
+
+// Specific requirements
+"show me tokens launching today with dev wallets that have good history"
+
+// Monitor a specific launch
+"watch the $PEPE token launch"</code></pre>
+                </div>
+
+                <div class="callout callout-info">
+                    <div class="callout-icon">💡</div>
+                    <div class="callout-content">
+                        <h4>Pro Tip</h4>
+                        <p>Set up scout criteria once and scannr will continuously monitor and alert you when matching tokens appear. You can refine criteria anytime by chatting with the bot.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Snipe Feature -->
+            <section id="snipe" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">⚡</span>
+                    Snipe - Instant Trading
+                </h2>
+                <p>Execute trades at lightning speed with natural language commands. Set entries, take-profits, and stop-losses without complex interfaces.</p>
+
+                <h3>Snipe Capabilities:</h3>
+                <ul class="feature-list">
+                    <li>Instant buy/sell execution with MEV protection</li>
+                    <li>Automatic slippage optimization</li>
+                    <li>Set multiple take-profit targets</li>
+                    <li>Trailing stop-loss functionality</li>
+                    <li>Position sizing recommendations</li>
+                </ul>
+
+                <h3>Trading Commands:</h3>
+                <div class="code-block">
+                    <div class="code-header">Example Commands</div>
+                    <pre><code>// Simple buy
+"buy 1 SOL worth of $BONK"
+
+// With take profit
+"buy $PEPE for 0.5 ETH, sell 50% at 2x and 50% at 5x"
+
+// Stop loss
+"set stop loss at -20% for my $DOGE position"
+
+// Limit order
+"buy $WIF when it hits $0.50"
+
+// Quick sell
+"sell all my $BONK"
+"sell 50% of $PEPE position"</code></pre>
+                </div>
+
+                <div class="callout callout-warning">
+                    <div class="callout-icon">⚠️</div>
+                    <div class="callout-content">
+                        <h4>Important</h4>
+                        <p>Always verify token contract addresses before trading. scannr will show you contract details and ask for confirmation on first-time purchases.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Intel Feature -->
+            <section id="intel" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">🕵️</span>
+                    Intel - Wallet Analysis
+                </h2>
+                <p>Deep dive into any wallet or contract with comprehensive intelligence gathering. See history, patterns, and red flags before you commit.</p>
+
+                <h3>Intel Provides:</h3>
+                <ul class="feature-list">
+                    <li>Complete wallet transaction history</li>
+                    <li>Past trading performance and win rates</li>
+                    <li>Holder distribution analysis for tokens</li>
+                    <li>Developer reputation and past projects</li>
+                    <li>Smart contract audit results</li>
+                    <li>Liquidity lock information</li>
+                    <li>Red flag detection (honeypots, proxy contracts, etc.)</li>
+                </ul>
+
+                <h3>Intel Commands:</h3>
+                <div class="code-block">
+                    <div class="code-header">Example Commands</div>
+                    <pre><code>// Check a wallet
+"analyze wallet 0x742d35Cc6634C0532925a3b8..."
+
+// Check a token
+"intel on $PEPE"
+"check contract 0x6982508145454Ce325dDbE..."
+
+// Developer check
+"who created $BONK?"
+"show me the dev's history"
+
+// Compare wallets
+"compare these two wallets for trading patterns"</code></pre>
+                </div>
+            </section>
+
+            <!-- Track Feature -->
+            <section id="track" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">📊</span>
+                    Track - Portfolio Monitoring
+                </h2>
+                <p>Monitor your bags and get intelligent alerts when tokens hit your targets or trigger conditions.</p>
+
+                <h3>Tracking Features:</h3>
+                <ul class="feature-list">
+                    <li>Real-time portfolio value tracking</li>
+                    <li>P&L calculations across all positions</li>
+                    <li>Custom price alerts</li>
+                    <li>Wallet activity notifications</li>
+                    <li>Gas fee optimization alerts</li>
+                    <li>Portfolio rebalancing suggestions</li>
+                </ul>
+
+                <h3>Tracking Commands:</h3>
+                <div class="code-block">
+                    <div class="code-header">Example Commands</div>
+                    <pre><code>// View portfolio
+"show my portfolio"
+"what's my total P&L?"
+
+// Set alerts
+"alert me when $BONK hits $0.00001"
+"notify me if any whale buys $PEPE"
+
+// Track wallets
+"watch wallet 0x742d35Cc6634C0532925a3b8..."
+"alert me when this wallet makes a trade"
+
+// Position monitoring
+"how is my $DOGE position doing?"</code></pre>
+                </div>
+            </section>
+
+            <!-- Limit Orders -->
+            <section id="limit-orders" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">📈</span>
+                    Limit Orders
+                </h2>
+                <p>Set buy and sell orders at specific prices. scannr monitors the market and executes when your conditions are met.</p>
+
+                <div class="code-block">
+                    <div class="code-header">Limit Order Commands</div>
+                    <pre><code>// Buy limit
+"buy 1 ETH worth of $PEPE when it drops to $0.000008"
+
+// Sell limit
+"sell my $BONK if it reaches $0.00002"
+
+// Range orders
+"buy $WIF between $0.40 and $0.50, split into 5 orders"
+
+// Cancel orders
+"cancel my $PEPE buy order"
+"show all my active orders"</code></pre>
+                </div>
+            </section>
+
+            <!-- Copy Trading -->
+            <section id="copy-trading" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">👥</span>
+                    Copy Trading
+                </h2>
+                <p>Automatically copy trades from successful wallets. Follow smart money and replicate winning strategies.</p>
+
+                <h3>Copy Trading Features:</h3>
+                <ul class="feature-list">
+                    <li>Copy trades from any wallet in real-time</li>
+                    <li>Set maximum position sizes and risk limits</li>
+                    <li>Filter which tokens to copy</li>
+                    <li>Automatic profit-taking on copied positions</li>
+                    <li>Performance tracking for copied wallets</li>
+                </ul>
+
+                <div class="code-block">
+                    <div class="code-header">Copy Trading Commands</div>
+                    <pre><code>// Start copying
+"copy trades from wallet 0x742d35Cc..."
+
+// With limits
+"copy wallet 0x742d35Cc... but max 0.5 ETH per trade"
+
+// Selective copying
+"only copy $PEPE and $BONK trades from this wallet"
+
+// Stop copying
+"stop copying wallet 0x742d35Cc..."</code></pre>
+                </div>
+
+                <div class="callout callout-warning">
+                    <div class="callout-icon">⚠️</div>
+                    <div class="callout-content">
+                        <h4>Risk Warning</h4>
+                        <p>Copy trading involves risk. Past performance doesn't guarantee future results. Always set position limits and only risk what you can afford to lose.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Custom Alerts -->
+            <section id="alerts" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">🔔</span>
+                    Custom Alerts
+                </h2>
+                <p>Create sophisticated alert conditions for price movements, volume changes, wallet activities, and more.</p>
+
+                <div class="code-block">
+                    <div class="code-header">Alert Commands</div>
+                    <pre><code>// Price alerts
+"alert me when $BONK is up 50%"
+"notify if $PEPE drops below $0.000007"
+
+// Volume alerts
+"alert if $WIF volume spikes 10x"
+
+// Wallet alerts
+"notify me when this wallet buys anything"
+"alert if any top 10 holder sells $BONK"
+
+// Complex conditions
+"alert me if $PEPE hits $0.00001 and volume is over 100M"</code></pre>
+                </div>
+            </section>
+
+            <!-- Multi-Chain Support -->
+            <section id="multi-chain" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">🔗</span>
+                    Multi-Chain Support
+                </h2>
+                <p>Trade across multiple blockchains from a single interface. scannr supports all major chains with more being added regularly.</p>
+
+                <h3>Supported Chains:</h3>
+                <div class="chain-grid">
+                    <div class="chain-card">
+                        <h4>Ethereum</h4>
+                        <p>Full support for ERC-20 tokens and DeFi protocols</p>
+                    </div>
+                    <div class="chain-card">
+                        <h4>Solana</h4>
+                        <p>Ultra-fast execution for SPL tokens</p>
+                    </div>
+                    <div class="chain-card">
+                        <h4>Base</h4>
+                        <p>Low fees and fast transactions on Coinbase's L2</p>
+                    </div>
+                    <div class="chain-card">
+                        <h4>Arbitrum</h4>
+                        <p>Ethereum L2 with lower gas costs</p>
+                    </div>
+                    <div class="chain-card">
+                        <h4>Polygon</h4>
+                        <p>High throughput for frequent traders</p>
+                    </div>
+                    <div class="chain-card">
+                        <h4>BSC</h4>
+                        <p>Trade BEP-20 tokens efficiently</p>
+                    </div>
+                </div>
+
+                <h3>Chain-Specific Commands:</h3>
+                <div class="code-block">
+                    <div class="code-header">Multi-Chain Commands</div>
+                    <pre><code>// Specify chain
+"scout tokens on Solana"
+"buy $PEPE on Ethereum"
+
+// Cross-chain
+"what's $BONK trading at on Solana vs Ethereum?"
+
+// Set default
+"use Base as my default chain"</code></pre>
+                </div>
+            </section>
+
+            <!-- Migration Trading -->
+            <section id="migration-trades" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">🔄</span>
+                    Migration Trading
+                </h2>
+                <p>Capitalize on token migrations and V2 launches. Buy on migration and sell instantly for quick profits.</p>
+
+                <h3>Migration Strategies:</h3>
+                <ul class="feature-list">
+                    <li><strong>Buy on Migration:</strong> Automatically purchase tokens during contract migrations</li>
+                    <li><strong>Sell on Migration:</strong> Exit positions before migration completes</li>
+                    <li><strong>Migration Monitoring:</strong> Get alerts for upcoming migrations</li>
+                    <li><strong>Auto-Swap:</strong> Automatically swap V1 to V2 tokens</li>
+                </ul>
+
+                <div class="code-block">
+                    <div class="code-header">Migration Commands</div>
+                    <pre><code>// Monitor migrations
+"watch for $PEPE V2 migration"
+
+// Buy on migration
+"buy $TOKEN as soon as migration starts"
+
+// Sell before migration
+"sell my $TOKEN before V2 migration"</code></pre>
+                </div>
+            </section>
+
+            <!-- DCA Strategies -->
+            <section id="dca" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">💰</span>
+                    DCA Strategies
+                </h2>
+                <p>Dollar-cost average into positions automatically. Set schedules and conditions for recurring buys.</p>
+
+                <div class="code-block">
+                    <div class="code-header">DCA Commands</div>
+                    <pre><code>// Time-based DCA
+"buy $10 worth of $ETH every day"
+"DCA into $BONK with $50 per week"
+
+// Price-based DCA
+"buy $PEPE with $20 every time it drops 10%"
+
+// Stop DCA
+"stop my $ETH DCA"
+"pause all DCA orders"</code></pre>
+                </div>
+            </section>
+
+            <!-- Stop Loss & Take Profit -->
+            <section id="stop-loss" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">🎯</span>
+                    Stop Loss & Take Profit
+                </h2>
+                <p>Protect your capital and lock in profits with automated exit strategies.</p>
+
+                <h3>Exit Strategy Types:</h3>
+                <ul class="feature-list">
+                    <li><strong>Fixed Stop Loss:</strong> Exit at a specific price or percentage</li>
+                    <li><strong>Trailing Stop Loss:</strong> Follows price up but stops you out on reversals</li>
+                    <li><strong>Tiered Take Profit:</strong> Sell portions at multiple targets</li>
+                    <li><strong>Time-Based Exits:</strong> Exit after a specific duration</li>
+                </ul>
+
+                <div class="code-block">
+                    <div class="code-header">Exit Strategy Commands</div>
+                    <pre><code>// Stop loss
+"set 20% stop loss on $BONK"
+"trailing stop at -15% for $PEPE"
+
+// Take profit
+"sell 25% at 2x, 25% at 5x, 50% at 10x on $WIF"
+"take profit at $0.00001 for $BONK"
+
+// Combined
+"buy $PEPE, stop loss -20%, take profit +100%"</code></pre>
+                </div>
+            </section>
+
+            <!-- Risk Management -->
+            <section id="risk-management" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">🛡️</span>
+                    Risk Management
+                </h2>
+                <p>Smart position sizing and risk controls to protect your capital.</p>
+
+                <h3>Risk Management Tools:</h3>
+                <ul class="feature-list">
+                    <li>Automatic position sizing based on risk tolerance</li>
+                    <li>Maximum daily loss limits</li>
+                    <li>Exposure limits per token</li>
+                    <li>Gas fee optimization</li>
+                    <li>Slippage protection</li>
+                </ul>
+
+                <div class="code-block">
+                    <div class="code-header">Risk Management Commands</div>
+                    <pre><code>// Set risk limits
+"set my risk per trade to 2%"
+"max 5% of portfolio in any single token"
+
+// Daily limits
+"stop trading if I'm down $500 today"
+
+// Gas management
+"only trade when gas is under 30 gwei"</code></pre>
+                </div>
+
+                <div class="callout callout-info">
+                    <div class="callout-icon">💡</div>
+                    <div class="callout-content">
+                        <h4>Recommended Settings</h4>
+                        <p>We recommend risking no more than 1-2% of your portfolio per trade and keeping position sizes under 10% of total capital for maximum safety.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Basic Commands -->
+            <section id="basic-commands" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">📝</span>
+                    Basic Commands Reference
+                </h2>
+                
+                <div class="command-table">
+                    <div class="command-row">
+                        <div class="command-name">help</div>
+                        <div class="command-desc">Show available commands and features</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-name">start / begin</div>
+                        <div class="command-desc">Initialize scannr and set up preferences</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-name">settings</div>
+                        <div class="command-desc">View and modify your trading preferences</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-name">portfolio / pf</div>
+                        <div class="command-desc">View your current holdings and P&L</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-name">history</div>
+                        <div class="command-desc">View your trade history</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-name">balance</div>
+                        <div class="command-desc">Check your wallet balances</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trade Commands -->
+            <section id="trade-commands" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">💹</span>
+                    Trade Commands Reference
+                </h2>
+                
+                <div class="command-table">
+                    <div class="command-row">
+                        <div class="command-name">buy [amount] [token]</div>
+                        <div class="command-desc">Purchase tokens</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-name">sell [amount] [token]</div>
+                        <div class="command-desc">Sell tokens from your portfolio</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-name">limit buy/sell</div>
+                        <div class="command-desc">Create limit orders</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-name">cancel [order]</div>
+                        <div class="command-desc">Cancel pending orders</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-name">orders</div>
+                        <div class="command-desc">View active orders</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analysis Commands -->
+            <section id="analysis-commands" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">📊</span>
+                    Analysis Commands Reference
+                </h2>
+                
+                <div class="command-table">
+                    <div class="command-row">
+                        <div class="command-name">scout [criteria]</div>
+                        <div class="command-desc">Find tokens matching your criteria</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-name">intel [wallet/token]</div>
+                        <div class="command-desc">Analyze wallet or token contract</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-name">check [token]</div>
+                        <div class="command-desc">Quick token safety check</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-name">price [token]</div>
+                        <div class="command-desc">Get current token price</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-name">chart [token]</div>
+                        <div class="command-desc">View price chart</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-name">holders [token]</div>
+                        <div class="command-desc">Analyze holder distribution</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Wallet Setup -->
+            <section id="wallet-setup" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">👛</span>
+                    Wallet Setup
+                </h2>
+                <p>Connect your wallet securely to start trading. scannr supports multiple wallet types and never stores your private keys.</p>
+
+                <h3>Setup Process:</h3>
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Initiate Wallet Connection</h3>
+                            <p>Message scannr with "setup wallet" or "connect wallet"</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Choose Connection Method</h3>
+                            <p>Select between new wallet generation or importing existing wallet</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Secure Your Keys</h3>
+                            <p>Save your seed phrase in a secure location. Never share it with anyone.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout callout-warning">
+                    <div class="callout-icon">🔒</div>
+                    <div class="callout-content">
+                        <h4>Security First</h4>
+                        <p>scannr uses secure encryption and never stores your private keys on our servers. Your seed phrase is encrypted locally and only decrypted when executing trades.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Security -->
+            <section id="security" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">🔐</span>
+                    Security Best Practices
+                </h2>
+                
+                <h3>Essential Security Tips:</h3>
+                <ul class="feature-list">
+                    <li><strong>Never share your seed phrase:</strong> scannr will never ask for your full seed phrase in chat</li>
+                    <li><strong>Enable 2FA:</strong> Add an extra layer of security to your X account</li>
+                    <li><strong>Use a trading wallet:</strong> Keep a separate wallet for trading, not your main holdings</li>
+                    <li><strong>Verify contracts:</strong> Always check token contracts before trading</li>
+                    <li><strong>Set spending limits:</strong> Limit maximum trade sizes to protect against errors</li>
+                    <li><strong>Regular audits:</strong> Review your connected apps and revoke unused permissions</li>
+                </ul>
+
+                <div class="callout callout-danger">
+                    <div class="callout-icon">⛔</div>
+                    <div class="callout-content">
+                        <h4>Scam Warning</h4>
+                        <p>Be aware of impersonators. The only official scannr bot is @scannrbot on X. We will never DM you first or ask for your seed phrase, password, or private keys.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- API Keys -->
+            <section id="api-keys" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">🔑</span>
+                    API Keys & Integrations
+                </h2>
+                <p>Connect external services and exchanges for enhanced functionality.</p>
+
+                <h3>Supported Integrations:</h3>
+                <ul class="feature-list">
+                    <li>DEX aggregators for best prices</li>
+                    <li>Price feed providers</li>
+                    <li>Blockchain explorers</li>
+                    <li>Portfolio trackers</li>
+                </ul>
+
+                <div class="code-block">
+                    <div class="code-header">API Commands</div>
+                    <pre><code>// Add API key
+"connect to [service name]"
+
+// View connections
+"show my connected services"
+
+// Remove connection
+"disconnect [service name]"</code></pre>
+                </div>
+            </section>
+
+            <!-- FAQs -->
+            <section id="faqs" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">❓</span>
+                    Frequently Asked Questions
+                </h2>
+
+                <div class="faq-list">
+                    <div class="faq-item-doc">
+                        <h3>Is scannr free to use?</h3>
+                        <p>scannr offers a free tier with basic features. Premium features are available through Creator Rewards and subscription plans. There are no hidden fees, though standard blockchain gas fees apply to all transactions.</p>
+                    </div>
+
+                    <div class="faq-item-doc">
+                        <h3>What chains does scannr support?</h3>
+                        <p>Currently supporting Ethereum, Solana, Base, Arbitrum, Polygon, and BSC. More chains are being added regularly based on community demand.</p>
+                    </div>
+
+                    <div class="faq-item-doc">
+                        <h3>How fast is trade execution?</h3>
+                        <p>scannr uses optimized routing and MEV protection to execute trades in milliseconds. Actual execution speed depends on network congestion and gas settings.</p>
+                    </div>
+
+                    <div class="faq-item-doc">
+                        <h3>Can I use scannr on mobile?</h3>
+                        <p>Yes! Since scannr works through X DMs, you can use it from any device - mobile, tablet, or desktop. No app download required.</p>
+                    </div>
+
+                    <div class="faq-item-doc">
+                        <h3>Is my wallet secure?</h3>
+                        <p>Yes. scannr uses end-to-end encryption and never stores your private keys on our servers. Your seed phrase is encrypted locally and only you have access to it.</p>
+                    </div>
+
+                    <div class="faq-item-doc">
+                        <h3>What are the fees?</h3>
+                        <p>scannr charges a small fee on successful trades (typically 0.5-1%). You'll also pay standard blockchain gas fees. No fees for failed transactions or analysis features.</p>
+                    </div>
+
+                    <div class="faq-item-doc">
+                        <h3>Can I test without real money?</h3>
+                        <p>Yes! Use "demo mode" to practice with simulated funds and test strategies without risk.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Troubleshooting -->
+            <section id="troubleshooting" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">🔧</span>
+                    Troubleshooting
+                </h2>
+
+                <h3>Common Issues & Solutions:</h3>
+
+                <div class="troubleshoot-item">
+                    <h4>Bot not responding</h4>
+                    <ul>
+                        <li>Check that you're messaging @scannrbot (not an impersonator)</li>
+                        <li>Ensure your X account has DM permissions enabled</li>
+                        <li>Wait a few seconds and try again - the bot may be processing a previous request</li>
+                    </ul>
+                </div>
+
+                <div class="troubleshoot-item">
+                    <h4>Trade failed</h4>
+                    <ul>
+                        <li>Check your wallet has sufficient balance including gas fees</li>
+                        <li>Verify slippage tolerance is adequate for the token</li>
+                        <li>Ensure the token has sufficient liquidity</li>
+                        <li>Check if the token has buy/sell taxes or restrictions</li>
+                    </ul>
+                </div>
+
+                <div class="troubleshoot-item">
+                    <h4>Can't connect wallet</h4>
+                    <ul>
+                        <li>Try disconnecting and reconnecting</li>
+                        <li>Verify you're using a supported wallet type</li>
+                        <li>Check that you saved your seed phrase correctly</li>
+                        <li>Contact support if the issue persists</li>
+                    </ul>
+                </div>
+
+                <div class="troubleshoot-item">
+                    <h4>Alerts not working</h4>
+                    <ul>
+                        <li>Verify your notification settings are enabled</li>
+                        <li>Check that alert conditions are properly formatted</li>
+                        <li>Make sure you haven't hit your alert limit</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Contact Support -->
+            <section id="contact" class="docs-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">💬</span>
+                    Contact Support
+                </h2>
+                <p>Need help? Our support team is here for you.</p>
+
+                <div class="support-grid">
+                    <div class="support-card">
+                        <h3>📧 Email Support</h3>
+                        <p>support@scannr.io</p>
+                        <p class="support-time">Response within 24 hours</p>
+                    </div>
+
+                    <div class="support-card">
+                        <h3>💬 Community Discord</h3>
+                        <p>Join our Discord server</p>
+                        <p class="support-time">Get help from the community</p>
+                    </div>
+
+                    <div class="support-card">
+                        <h3>🐦 X / Twitter</h3>
+                        <p>@scannrbot</p>
+                        <p class="support-time">Follow for updates</p>
+                    </div>
+
+                    <div class="support-card">
+                        <h3>📚 Documentation</h3>
+                        <p>You're already here!</p>
+                        <p class="support-time">Updated regularly</p>
+                    </div>
+                </div>
+
+                <div class="callout callout-success">
+                    <div class="callout-icon">🚀</div>
+                    <div class="callout-content">
+                        <h4>Ready to Start?</h4>
+                        <p>Head over to X and message @scannrbot to begin your trading journey. The AI is waiting to help you find your next 100x!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Navigation -->
+            <div class="docs-footer">
+                <div class="footer-nav">
+                    <div class="footer-nav-item">
+                        <a href="index.html" class="footer-nav-link">
+                            <span class="footer-nav-label">Back to</span>
+                            <span class="footer-nav-title">Home</span>
+                        </a>
+                    </div>
+                    <div class="footer-nav-item">
+                        <a href="#faqs" class="footer-nav-link">
+                            <span class="footer-nav-label">Next</span>
+                            <span class="footer-nav-title">FAQs</span>
+                        </a>
+                    </div>
+                </div>
+                <p class="docs-update">Last updated: February 3, 2026</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="docs.js"></script>
+</body>
+</html>

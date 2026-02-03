@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scannr - AI Trading Agents</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg class="logo-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="36" height="36" rx="18" fill="#00ff88" fill-opacity="0.1" stroke="#00ff88" stroke-width="2"/>
+                    <path d="M20 12L28 20L20 28L12 20L20 12Z" fill="#00ff88"/>
+                    <circle cx="20" cy="20" r="3" fill="#0a0a0a"/>
+                </svg>
+                <span class="logo-text">scannr</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="#faq">FAQ</a>
+                <a href="docs.html" class="btn-primary">Documentation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-icon">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="20" width="80" height="60" rx="4" fill="#1a1a1a" stroke="#00ff88" stroke-width="2"/>
+                <rect x="15" y="25" width="55" height="40" rx="2" fill="#00ff88" fill-opacity="0.1"/>
+                <circle cx="42.5" cy="45" r="12" fill="#00ff88"/>
+                <path d="M35 45L40 50L50 40" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="75" y="30" width="8" height="45" rx="1" fill="#1a1a1a" stroke="#00ff88" stroke-width="1"/>
+                <circle cx="79" cy="35" r="2" fill="#00ff88"/>
+                <rect x="77" y="40" width="4" height="3" fill="#00ff88" fill-opacity="0.5"/>
+                <rect x="77" y="45" width="4" height="3" fill="#00ff88" fill-opacity="0.5"/>
+            </svg>
+        </div>
+        <h1 class="hero-title">
+            the AI that <span class="highlight">trades smart</span><br>
+            so you don't have to
+        </h1>
+        <p class="hero-subtitle">
+            Automated trading agents. Real-time analysis. Smart execution. All from your command.
+        </p>
+        <div class="hero-buttons">
+            <a href="docs.html" class="btn-primary btn-large">Documentation</a>
+            <button class="btn-secondary btn-large">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                </svg>
+                Follow on X
+            </button>
+        </div>
+    </section>
+
+    <!-- Quick Start Section -->
+    <section class="quick-start">
+        <div class="quick-start-container">
+            <h2 class="quick-start-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2">
+                    <polyline points="4 17 10 11 4 5"></polyline>
+                    <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+                Quick Start
+            </h2>
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-tab active">One-liner</span>
+                    <span class="terminal-tab">X / Twitter</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-comment"># Start trading with AI. Instant setup. No wallet required. 🚀</div>
+                    <div class="terminal-command">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-text">iwr -useb https://scannr.fun/install.ps1 | iex</span>
+                        <button class="copy-button" onclick="copyToClipboard('start trading')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <p class="quick-start-description">
+                Works on any device. Message from X mobile, desktop, or web. Get started in seconds.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2 class="section-title">Your edge on <span class="highlight">crypto trading</span></h2>
+        <p class="section-subtitle">
+            Everything you need to analyze, execute, and monitor trades — all from intelligent AI agents.
+        </p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Scout</h3>
+                <p class="feature-description">
+                    Monitors markets in real-time. Surfaces opportunities that match your criteria and trading strategy.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Snipe</h3>
+                <p class="feature-description">
+                    Execute trades instantly from AI commands. Set entries, take-profits, and stop-losses in plain English.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2">
+                        <path d="M12 20h9"></path>
+                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Intel</h3>
+                <p class="feature-description">
+                    Deep check any wallet or contract. See history, past performance, and red flags before you commit.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Track</h3>
+                <p class="feature-description">
+                    Monitor your positions and get alerts when assets hit your targets or trigger conditions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <h2 class="section-title">How it <span class="highlight">works</span></h2>
+        <p class="section-subtitle">
+            Get started in seconds. No app to download, no wallet to connect.
+        </p>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">01</div>
+                <div class="step-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                </div>
+                <h3 class="step-title">DM @scannrbot on X</h3>
+                <p class="step-description">
+                    Start a conversation with our bot on X (formerly Twitter).
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">02</div>
+                <div class="step-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                </div>
+                <h3 class="step-title">Tell it what you want</h3>
+                <p class="step-description">
+                    Find opportunities, analyze wallets, execute trades — just say it in plain English.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">03</div>
+                <div class="step-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3 class="step-title">scannr handles the rest</h3>
+                <p class="step-description">
+                    Sit back while scannr executes your strategy automatically.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <h2 class="section-title">Frequently asked <span class="highlight">questions</span></h2>
+        <p class="section-subtitle">
+            Everything you need to know about scannr.
+        </p>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is scannr?</span>
+                    <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>scannr is an AI-powered trading assistant that helps you discover, analyze, and execute crypto trades through simple conversations. No complex dashboards or trading terminals required.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I start?</span>
+                    <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Simply DM @scannrbot on X (Twitter) and start chatting. Tell us what you're looking for in plain English, and our AI will handle the rest.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Is it free?</span>
+                    <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>We offer a free tier with basic features. Premium features and advanced trading strategies are available through Creator Rewards and subscription plans.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What chains are supported?</span>
+                    <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Currently supporting Ethereum, Solana, Base, and Arbitrum. More chains coming soon based on community demand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <svg class="footer-logo" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="36" height="36" rx="18" fill="#00ff88" fill-opacity="0.1" stroke="#00ff88" stroke-width="2"/>
+                    <path d="M20 12L28 20L20 28L12 20L20 12Z" fill="#00ff88"/>
+                    <circle cx="20" cy="20" r="3" fill="#0a0a0a"/>
+                </svg>
+                <span class="footer-brand-text">scannr</span>
+            </div>
+            <p class="footer-copyright">2026 scannr. All rights reserved.</p>
+            <a href="https://x.com/scannrbot" class="footer-social" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                </svg>
+                @scannrbot
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

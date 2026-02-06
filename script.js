@@ -1,16 +1,3 @@
-// Copy CA function
-function copyCa() {
-    const caText = 'coming soon';
-    navigator.clipboard.writeText(caText).then(() => {
-        const button = document.querySelector('.ca-copy');
-        const originalContent = button.innerHTML;
-        button.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-        setTimeout(() => {
-            button.innerHTML = originalContent;
-        }, 2000);
-    });
-}
-
 // FAQ Accordion
 document.addEventListener('DOMContentLoaded', () => {
     const faqItems = document.querySelectorAll('.faq-item');
